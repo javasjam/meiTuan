@@ -1,0 +1,14 @@
+*{
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   text-decoration: none;
+   font-size: 0.4rem;
+   box-sizing: border-box;
+}
+html{
+	font-family: '微软雅黑';
+}
+input{
+	box-sizing: border-box;
+}
