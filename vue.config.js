@@ -3,6 +3,9 @@ module.exports = {
   publicPath: './',  
   // 输出文件目录
   outputDir: 'dist',
+   // assetsRoot: path.resolve(__dirname, '../dist'),
+   //  assetsSubDirectory: 'static',
+   //  assetsPublicPath: '', //添加根目录，如果域名为根目录，则为 '/'
   // eslint-loader 是否在保存的时候检查
   lintOnSave: true,
   // use the full build with in-browser compiler?
@@ -38,15 +41,15 @@ module.exports = {
   // see https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa
   pwa: {},
   // webpack-dev-server 相关配置
-  devServer: {
-    open: process.platform === 'darwin',
-    disableHostCheck: true,
-    host: 'https://javasjam.github.io/',//如果是真机测试，就使用这个IP
-    port: 1234,
-    https: false,
-    hotOnly: false,
-   before: app => {}
-  },
+     // proxyTable: {
+     //  '/api': {
+     //    target: 'http://admin.gxxmglzx.com',//目标接口域名
+     //    changeOrigin: true,//是否跨域
+     //    pathRewrite: {
+     //      '^/api': ''//重写接口,后面可以使用重写的新路径，一般不做更改
+     //    }
+     //  },
+
   // 第三方插件配置
   pluginOptions: {
    // ...

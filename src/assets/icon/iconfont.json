@@ -1,0 +1,72 @@
+{
+  "id": "2239246",
+  "name": "meituan",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "782215",
+      "name": "配送1",
+      "font_class": "peisong1",
+      "unicode": "e6c0",
+      "unicode_decimal": 59072
+    },
+    {
+      "icon_id": "1301372",
+      "name": "时间",
+      "font_class": "shijian",
+      "unicode": "e65f",
+      "unicode_decimal": 58975
+    },
+    {
+      "icon_id": "1418252",
+      "name": "优惠劵",
+      "font_class": "youhuijuan",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "1517680",
+      "name": "定位",
+      "font_class": "dingwei",
+      "unicode": "e655",
+      "unicode_decimal": 58965
+    },
+    {
+      "icon_id": "4239837",
+      "name": "满减优惠",
+      "font_class": "manjianyouhui",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "13371263",
+      "name": "购物车",
+      "font_class": "gouwuche",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "8288851",
+      "name": "减号",
+      "font_class": "jianhao",
+      "unicode": "e84f",
+      "unicode_decimal": 59471
+    },
+    {
+      "icon_id": "16588055",
+      "name": "加号",
+      "font_class": "jiahao",
+      "unicode": "e702",
+      "unicode_decimal": 59138
+    },
+    {
+      "icon_id": "3315094",
+      "name": "返回",
+      "font_class": "fanhui",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    }
+  ]
+}

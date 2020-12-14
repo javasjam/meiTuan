@@ -2,7 +2,7 @@
 	<div>
 		<van-list v-model="loading" :finished="finished" finished-text="没有更多了"  @load="getDate">
 			<ul class="list-shop-box">
-				<li class="list-shop-list" v-for="(item,index) in shopList" :key="item.id">
+				<li class="list-shop-list" v-for="(item,index) in shopList" :key="item.id" @click='goDetail(item.id)'>
 					<div class="list-img-box">
 						<img :src="item.img" alt="">
 					</div>
@@ -12,8 +12,8 @@
 						</div>
 						<div class="list-rate-box">
 							<div>
-							<span >
-									<van-rate v-model='value[index]' style="padding-top: 0.02rem;" allow-half gutter='0.03rem' size='0.2rem' color='#ffd21e' readonly/>
+							<span>
+									<van-rate v-model='value[index]' style="padding-top: 0.02rem;" allow-half gutter='0.01rem' size='0.2rem' color='#ffd21e' readonly/>
 								</span>
 								<span class="list-rate" >{{item.score}}分</span>
 								<span>月销{{item.num}}</span>
@@ -23,7 +23,7 @@
 								<span>{{item.distance}}</span>
 							</div>
 						</div>
-						<div class="distri">
+						<div class="list-distri">
 							<span>起送{{item.per_capita}}</span>
 							<span>配送{{item.fee}}</span>
 							<span>人均{{item.price}}</span>
@@ -35,7 +35,7 @@
 	</div>
 </template>
 <script>
-	import {getAPI} from '@/api/api.js'
+	import {getAPI} from '@/api/api'
 	export default{
 		data(){
 			return{
@@ -59,7 +59,7 @@
 						let num = res.data.list[i].score.substring(2,4);
 						if(Number(num)>5){
 							this.value = this.value.concat(Math.ceil(res.data.list[i].score));
-						}else if(Number(num)<5&&Number(num)>0){
+						}else if(Number(num)<=5&&Number(num)>0){
 							this.value = this.value.concat(Number(parseInt(res.data.list[i].score)+0.5));
 						}else{
 							this.value= this.value.concat(Number(res.data.list[i].score));
@@ -73,6 +73,9 @@
 						this.finished = true;
 					}
 				})
+			},
+			goDetail(id){
+				this.$router.push({path:'/detail',query:{id}});
 			}
 		}
 		
@@ -122,15 +125,15 @@
 	.list-rate-box div:nth-child(2){
 		float: right;
 	}
-	.distri{
+	.list-distri{
 		clear: both;
 	}
-	.distri span{
+	.list-distri span{
 		margin-right: 0.1rem;
 
 	}
-	.van-rate__icon{
+/*	.van-rate__icon{
 		width:0.3rem;
 	}
-	
+	*/
 </style>

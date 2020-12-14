@@ -34,7 +34,7 @@
 		}
 	}
 </script>
-<style lang="scss">
+<style>
 	.cate-box{
 		overflow: hidden;
 		width: 100%;
